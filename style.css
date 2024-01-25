@@ -69,6 +69,11 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 20px 20px rgb(133, 133, 133);
+    transition: all .4s ease-in-out;
+}
+#about .profile-photo img:hover {
+    box-shadow: -90px 40px rgb(133, 133, 133), -40px -50px rgb(56, 56, 56);
 }
 #about .about-info {
     /* border: 5px solid green; */
@@ -162,16 +167,22 @@ body{
     margin-top: 20px;
 }
 .wrapper-aboutme-content .aboutme-image {
+    border: 3px solid var(--fgray);
+    border-radius: 30px;
     width: 400px;
     height: 400px;
     margin-right: 50px;
+    overflow: hidden;
 }
 .wrapper-aboutme-content .aboutme-image img {
-    border: 3px solid var(--fgray);
+    border-radius: 30px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    transition: all .2s ease-in-out;
+}
+.wrapper-aboutme-content .aboutme-image:hover img {
+    transform: scale(1.05);
 }
 .wrapper-aboutme-content .aboutme-content {
     /* border: 5px solid blue; */
@@ -194,6 +205,10 @@ body{
     padding: 1.5em 0;
     border-radius: 30px;
     color: var(--dgray);
+    transition: all .2s ease-in-out;
+}
+.wrapper-aboutme-content .aboutme-content .exp-box:hover {
+    transform: translateY(-10px);
 }
 .wrapper-aboutme-content .aboutme-content .aboutme-description {
     width: 700px;
@@ -223,6 +238,10 @@ body{
     border-radius: 30px;
     font-size: 1.7rem;
     padding: 1.7em 0;
+    transition: all .2s ease-in-out;
+}
+.skill-sectors .sector:hover {
+    transform: scale(1.05);
 }
 .skill-sectors .sector .sector-heading {
     text-align: center;
@@ -339,6 +358,10 @@ body{
     border: 2px solid var(--gray);
     padding: 2em 2em;
     background-color: #f7f7f7;
+    transition: all .4s ease-in-out;
+}
+#contact-section:hover .cont-src {
+    transform: scale(1.05);
 }
 .cont-src > * {
     display: inline-block;
@@ -372,4 +395,4 @@ footer .header ul a {
 footer p {
     text-align: center;
     color: var(--dgray);
-}
+} 
