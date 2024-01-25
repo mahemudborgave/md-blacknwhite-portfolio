@@ -15,6 +15,7 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     padding: 0 200px;
@@ -315,10 +316,60 @@ body{
 
 #contact-section {
     font-size: 1.7rem;
-    border: 5px solid red;
-    height: 80vh;
+    /* border: 5px solid red; */
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.cont-line1 {
+    font-size: 2.5rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+.cont-line2 {
+    font-size: 5rem;
+    color: black;
+    font-weight: 600;
+}
+.cont-src {
+    margin-top: 1em;
+    border-radius: 2em;
+    border: 2px solid var(--gray);
+    padding: 2em 2em;
+    background-color: #f7f7f7;
+}
+.cont-src > * {
+    display: inline-block;
+}
+.cont-src > :first-child {
+    margin-right: 20px;
+}
+.src i {
+    padding: 5px;
+}
+.src p {
+    display: inline-block;
+    font-weight: 400;
+}
+
+
+/* footer */
+
+footer {
+    font-size: 1.7rem;
+    padding: 50px 0;
+}
+footer .header {
+    justify-content: center;
+}
+footer .header ul a {
+    font-weight: 3rem;
+    margin: 0 2em;
+    color: black;
+}
+footer p {
+    text-align: center;
+    color: var(--dgray);
 }
