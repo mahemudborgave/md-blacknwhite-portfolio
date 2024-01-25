@@ -261,11 +261,64 @@ body{
     padding: 50px 0;
 }
 .projects {
-    border: 5px solid red;
-    width: 500px;
-    display: flex;
+    /* border: 5px solid red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 .projects .project {
-    border: 5px solid blue;
-    width: 800px;
+    font-size: 1.7rem;
+    border: 3px solid var(--fgray); 
+    border-radius: 2em;
+    padding: 1.5em 2em;
+    transition: all .2s ease-in-out;
+}
+.projects .project:hover {
+    box-shadow: 10px 10px rgb(70, 70, 70);
+}
+.projects .project .project-img {
+    width: 100%;
+    height: 300px;
+}
+.projects .project .project-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    object-fit: cover;
+}
+.projects .project p {
+    /* border: 1px solid red; */
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: .5em;
+}
+.projects .project .ref-links {
+    text-align: center;
+}
+.projects .project .ref-links a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: 2px solid var(--gray); 
+    padding: .3em 1.5em;
+    border-radius: 1.2em;
+    transition: all .3s ease-in-out;
+}
+.projects .project .ref-links a:hover {
+    background-color: rgb(67, 67, 67);
+    border-color: rgb(67, 67, 67);
+    color: white;
+}
+
+/* Contact Section */
+
+#contact-section {
+    font-size: 1.7rem;
+    border: 5px solid red;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
