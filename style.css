@@ -510,18 +510,19 @@ footer p {
 
     .header .nav-links {
         display: flex;
+        width: 90%;
         flex-direction: column;
         align-items: center;
         position: fixed;
-        right: -200px;
+        right: -100%;
         top: 110px;
         background-color: rgb(51, 51, 51);
-        padding: 20px 40px;
+        padding: 20px 0;
         transition: all .4s ease-in-out;
     }
 
     .header ul.visible {
-        right: 10%;
+        right: 0%;
     }
 
     .header ul a {
@@ -589,7 +590,7 @@ footer p {
     }
 
     #about .about-info .about-buttons a:nth-child(2) {
-        font-size: 1.1rem;
+        font-size: 1.1srem;
         padding: .6em 1.3em;
     }
 }
