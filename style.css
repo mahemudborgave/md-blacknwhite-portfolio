@@ -509,6 +509,7 @@ footer p {
     }
 
     .header .nav-links {
+        font-size: 1.7rem;
         display: flex;
         width: 90%;
         flex-direction: column;
@@ -519,7 +520,12 @@ footer p {
         background-color: rgb(51, 51, 51);
         padding: 20px 0;
         transition: all .4s ease-in-out;
+        /* opacity: 50%; */
     }
+
+    /* .header .nav-links:hover {
+        opacity: 80%;
+    } */
 
     .header ul.visible {
         right: 0%;
