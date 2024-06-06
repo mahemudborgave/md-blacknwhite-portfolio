@@ -193,7 +193,7 @@ body {
     /* border: 5px solid red; */
     text-align: center;
     text-transform: capitalize;
-    padding: 30px 0;
+    padding: 3em 0;
 }
 
 .wrapper-heading .small-heading {
@@ -210,15 +210,16 @@ body {
     /* border: 5px solid green; */
     display: flex;
     justify-content: space-between;
-    padding: 0 0 50px;
+    padding: 0 0 0;
     margin-top: 20px;
 }
 
 .wrapper-aboutme-content .aboutme-image {
     border: 3px solid var(--fgray);
     border-radius: 30px;
-    width: 400px;
-    height: 400px;
+    width: 30%;
+    height: 30%;
+    min-width: 300px;
     margin-right: 50px;
     overflow: hidden;
 }
@@ -249,7 +250,7 @@ body {
 .wrapper-aboutme-content .aboutme-content .exp-edu-box {
     /* border: 5px solid blue; */
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 }
 
@@ -260,6 +261,7 @@ body {
     padding: 1.5em 0;
     border-radius: 30px;
     color: var(--dgray);
+    margin-right: 20px;
     transition: all .2s ease-in-out;
 }
 
@@ -288,7 +290,9 @@ body {
 
 .skill-sectors {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    ;
     gap: 40px;
 }
 
@@ -310,12 +314,13 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 30px;
+    padding: 0 1em;
 }
 
 .skill-sectors .sector .skills {
     /* border: 5px solid red; */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 40px 60px;
     font-size: 1.7rem;
     padding: 0 70px;
@@ -368,7 +373,7 @@ body {
 
 .projects .project .project-img {
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
 
 .projects .project .project-img img {
@@ -418,24 +423,13 @@ body {
     align-items: center;
 }
 
-.cont-line1 {
-    font-size: 2.5rem;
-    color: var(--gray);
-    font-weight: 500;
-}
-
-.cont-line2 {
-    font-size: 5rem;
-    color: black;
-    font-weight: 600;
-}
-
 .cont-src {
     margin-top: 1em;
     border-radius: 2em;
     border: 2px solid var(--gray);
     padding: 2em 2em;
     background-color: #f7f7f7;
+    text-align: center;
     transition: all .4s ease-in-out;
 }
 
@@ -457,6 +451,7 @@ body {
 
 .src p {
     display: inline-block;
+    word-wrap: break-word;
     font-weight: 400;
 }
 
@@ -484,14 +479,27 @@ footer p {
 }
 
 @media (max-width: 1255px) {
-    body {
-        overflow-x: hidden;
-    }
-
     #about .about-info p:nth-child(2) {
         font-size: 3.5rem;
     }
 
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box {
+        flex-direction: column;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box .exp-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .aboutme-description {
+        display: none;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-box:hover {
+        transform: translateX(-10px);
+    }
 }
 
 @media (max-width: 1150px) {
@@ -560,6 +568,75 @@ footer p {
         font-size: 1.5rem;
         padding: .6em 1.3em;
     }
+
+
+    .wrapper-aboutme-content .aboutme-image {
+        display: none;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box {
+        flex-direction: row;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box .exp-box {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-box:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width : 786px) {
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box {
+        flex-direction: column;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-edu-box .exp-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .wrapper-aboutme-content .aboutme-content .exp-box:hover {
+        transform: translateX(-10px);
+    }
+
+
+    .skill-sectors .sector .skills {
+        gap: 20px 20px;
+        padding: 0 30px;
+    }
+
+    .skill-sectors .sector .sector-heading {
+        font-size: 2rem;
+    }
+
+    .skill-sectors .sector .skills .skill .skill-text .sk1 {
+        font-size: 1.5rem;
+    }
+
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .projects .project {
+        font-size: 1.3rem;
+        padding: 1.2em 1.2em;
+    }
+
+
+    .cont-src {
+        padding: 1em 1em;
+        overflow: auto;
+    }
+
+    .cont-src> :first-child {
+        padding: 0;
+        margin: 0.5em;
+    }
 }
 
 @media (max-width : 520px) {
@@ -603,6 +680,26 @@ footer p {
         font-size: 1.4rem;
         padding: .6em 1.3em;
     }
+
+    .wrapper-heading .small-heading {
+        font-size: 1.3rem;
+        color: var(--gray);
+    }
+
+    .wrapper-heading .main-heading {
+        font-size: 3.5rem;
+        font-weight: 800;
+    }
+
+
+    #contact-section {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+        padding: 50px 0;
+    }
 }
 
 @media (max-width : 385px) {
@@ -614,5 +711,9 @@ footer p {
     #about .about-info .about-buttons a:nth-child(2) {
         font-size: 1.1rem;
         padding: .6em 1.3em;
+    }
+
+    #contact-section {
+        font-size: 1rem;
     }
 }
